@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian Name Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(120deg, #ffecd2, #fcb69f);
+      margin: 0;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 16px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    #name {
+      margin-top: 30px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <h1>🇮🇳 Random Indian Name Generator</h1>
+  <button onclick="generateName()">Generate Name</button>
+  <div id="name">Click the button to get a name!</div>
+
+  <script>
+    const firstNames = [
+      "Aarav", "Vivaan", "Aditya", "Krishna", "Rohan",
+      "Diya", "Ananya", "Isha", "Kavya", "Sanya",
+      "Arjun", "Rahul", "Kabir", "Siddharth", "Kunal",
+      "Priya", "Meera", "Lakshmi", "Nisha", "Pooja"
+    ];
+
+    const lastNames = [
+      "Sharma", "Verma", "Reddy", "Nair", "Iyer",
+      "Patel", "Chowdhury", "Das", "Gupta", "Banerjee",
+      "Khan", "Singh", "Yadav", "Thakur", "Mehta",
+      "Pillai", "Bose", "Mishra", "Joshi", "Kulkarni"
+    ];
+
+    function generateName() {
+      const first = firstNames[Math.floor(Math.random() * firstNames.length)];
+      const last = lastNames[Math.floor(Math.random() * lastNames.length)];
+      document.getElementById("name").innerText = first + " " + last;
+    }
+  </script>
+</body>
+</html>
