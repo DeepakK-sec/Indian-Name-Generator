@@ -1,0 +1,15 @@
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Googlebot
+Disallow: /
+
+User-agent: Bingbot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+# Default: all other crawlers are allowed
+User-agent: *
+Disallow:
